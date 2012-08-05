@@ -157,6 +157,19 @@
         $example.prepend('<pre class="prettyprint linenums">' + example.innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
     });
     prettyPrint();
+
+    $(function () {
+        var data = [];
+        _(20).times(function () {
+            data.push({
+                key:Math.random() * 1000,
+                value:Math.random() * 10000
+            });
+        });
+        ko.applyBindings({
+            data:data
+        });
+    });
 </script>
 
 </html>

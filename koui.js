@@ -192,16 +192,3 @@ ko.bindingHandlers["ui-dropdown"] = {
     update:function () {
     }
 };
-
-$(function () {
-    var data = [];
-    _(20).times(function () {
-        data.push({
-            key:Math.random() * 1000,
-            value:Math.random() * 10000
-        });
-    });
-    ko.applyBindings({
-        data:data
-    });
-});
